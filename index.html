@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	canvas {
+		border: 1px  solid #1a1a1a;
+	}
+</style>
+
+<script type = "text/javascript" src= "BallAbstract.js"></script>
+<script type = "text/javascript" src= "SmallBall.js"></script>
+<script type = "text/javascript" src= "PlayerBall.js"></script>
+<script type = "text/javascript" src= "LifeBall.js"></script>
+<script type = "text/javascript" src= "MoneyBall.js"></script>
+<script type = "text/javascript" src= "SpeedBall.js"></script>
+</head>
+<body>
+
+	<div id = "gameBoard">
+	<div id = "scoreBoard"><span id = "points">0</span><span id = "lives">3</span></div>
+	<canvas width = "1000px" height = "600px" id = "canvas"></canvas>
+	
+	</div>
+	<script>
+	var canvas = document.getElementById('canvas');
+	var cxt = canvas.getContext("2d");
+
+	var player = new Player( 100, 100, 50, 'black', cxt);
+	player.draw();
+	player.moveLeft();
+	player.moveDown();
+	var speedBall = new SpeedBall(200, 200, 10 , 'blue', cxt);
+	speedBall.draw();
+	</script>
+</body>
+</html>
