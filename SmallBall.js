@@ -2,7 +2,7 @@
  * 
  */
 
-function SmallBall (x, y, size,  color, cxt) {
+function SmallBall (x, y, size, cxt) {
 
 	if (this.constuctor == Ball) {
 		throw new Error  ('This is an Abstract Class.')

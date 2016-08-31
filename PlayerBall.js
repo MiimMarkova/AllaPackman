@@ -39,48 +39,52 @@ function Player (x, y, size,  color, cxt) {
 	}
 	
 	this.move = function () {
+		_this = this;
 		if  (this.moveUp) {
-			this.y -= this.speed;
+			this.setY( this.getY() - speed)
 		}
 		
 		if  (this.moveDown) {
-			this.y += this.speed;
+			this.setY( this.getY() + speed)
 		}
 		
 		if  (this.moveLeft) {
-			this.x -= this.speed;
+			
+			this.setX( this.getX() - speed);
 		}
 		
 		if  (this.moveRight) {
-			this.x += this.speed;
+			this.setX( this.getX() + speed);
 		}
 	}
 	
 	this.handleKey = function (key, value) {
+		_this = this;
 		if (key == 37) {
-			this.moveLeft = value;
+			_this.moveLeft = value;
+			
 		}
 		
 		if (key == 38) {
-			this.moveUp = value;
+			_this.moveUp = value;
 		}
 		
 		if (key == 39) {
-			this.moveRight = value;
+			_this.moveRight = value;
 		}
 		
 		if (key == 40) {
-			this.moveDown = value;
+			_this.moveDown = value;
 		}
 	}
 	this.init = function () {
-			
+			_this= this; 
 			document.addEventListener('keyup', function(e){
-				this.handleKey(e.keyCode, false);
+				_this.handleKey(e.keyCode, false);
 			});
 			
 			document.addEventListener('keydown', function(e){
-				this.handleKey(e.keyCode, true);
+				_this.handleKey(e.keyCode, true);
 			});
 	
 	}

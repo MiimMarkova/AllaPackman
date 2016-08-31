@@ -2,9 +2,10 @@
  * 
  */
 
-function SpeedBall (x, y, size,  color, cxt) {
+function SpeedBall (x, y, size, cxt) {
 	
-	SmallBall.call(this, x, y, size,  color, cxt);
+	SmallBall.call(this, x, y, size, cxt);
+	var color = 'blue';
 	
 	
 }

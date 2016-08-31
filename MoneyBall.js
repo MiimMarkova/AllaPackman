@@ -2,9 +2,10 @@
  * 
  */
 
-function MoneyBall (x, y, size,  color, cxt) {
+function MoneyBall (x, y, size, cxt) {
 	
-	SmallBall.call(this, x, y, size,  color, cxt);
+	SmallBall.call(this, x, y, size, cxt);
+	var color = 'yellow';
 }
 
 MoneyBall.prototype = Object.create(SmallBall.prototype);
