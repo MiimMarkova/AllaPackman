@@ -3,39 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-	canvas {
-		border: 1px  solid #1a1a1a;
-	}
-</style>
+<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css" />
 
-<script type = "text/javascript" src= "BallAbstract.js"></script>
-<script type = "text/javascript" src= "SmallBall.js"></script>
-<script type = "text/javascript" src= "PlayerBall.js"></script>
-<script type = "text/javascript" src= "LifeBall.js"></script>
-<script type = "text/javascript" src= "MoneyBall.js"></script>
-<script type = "text/javascript" src= "SpeedBall.js"></script>
-<script type = "text/javascript" src= "Game.js"></script>
-<script type = "text/javascript" src= "BallManager.js"></script>
+<script type = "text/javascript" src= "assets/js/BallAbstract.js"></script>
+<script type = "text/javascript" src= "assets/js/SmallBall.js"></script>
+<script type = "text/javascript" src= "assets/js/PlayerBall.js"></script>
+<script type = "text/javascript" src= "assets/js/LifeBall.js"></script>
+<script type = "text/javascript" src= "assets/js/MoneyBall.js"></script>
+<script type = "text/javascript" src= "assets/js/SpeedBall.js"></script>
+<script type = "text/javascript" src= "assets/js/Game.js"></script>
+<script type = "text/javascript" src= "assets/js/BallManager.js"></script>
 </head>
 <body>
 
 	<div id = "gameBoard">
-	<div id = "scoreBoard"><span id = "points">0</span><span id = "lives">3</span></div>
-	<canvas width = "1000px" height = "600px" id = "canvas"></canvas>
+	<div id = "scoreBoard"><span id = "points">Points: 0</span><span id = "lives">Lives: 3</span></div>
+	<canvas width = "800px" height = "600px" id = "canvas"></canvas>
 	
 	</div>
 	<script>
-	var canvas = document.getElementById('canvas');
-	var cxt = canvas.getContext("2d");
+	
+	var cxt = document.getElementById('canvas').getContext("2d");
 
 	var player = new Player( 100, 100, 50, 'black', cxt);
 	var game = new Game;
 	game.init();
-	//player.moveLeft();
-	//player.moveDown();
-	//var speedBall = new SpeedBall(200, 200, 10 , 'blue', cxt);
-	//speedBall.draw();
+	
 	</script>
 </body>
 </html>

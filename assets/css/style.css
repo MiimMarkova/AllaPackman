@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body {
+	background-color: #1a1a1a;
+}
+canvas {
+	border: 1px  solid #1a1a1a;
+	background-color: #515658;
+	width: 800px;
+	margin: auto;
+	}
+#scoreBoard {
+	width: 800px;
+	background-color: #515658;
+	display: inline-block;
+	}
+#lives {
+	float: right;
+	}
